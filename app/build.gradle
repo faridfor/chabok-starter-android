@@ -5,7 +5,7 @@ android {
     buildToolsVersion "28.0.3"
 
     defaultConfig {
-        applicationId "com.adpdigital.chabok.starter"
+        applicationId "ir.ba24.key.debug"
         minSdkVersion 16
         targetSdkVersion 28
         versionCode 300

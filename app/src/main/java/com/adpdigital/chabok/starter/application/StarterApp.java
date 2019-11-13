@@ -32,7 +32,7 @@ public class StarterApp extends Application {
 
     private synchronized void initPushClient() {
         if (chabok == null) {
-            AdpPushClient.configureEnvironment(Environment.SANDBOX); // Mandatory
+            AdpPushClient.configureEnvironment(Environment.PRODUCTION); // Mandatory
             AdpPushClient.setLogLevel(LogLevel.VERBOSE); // Optional
             AdpPushClient.setDefaultTracker("8iFRmA"); // Optional
 
@@ -107,6 +107,7 @@ public class StarterApp extends Application {
     }
 
     public void onEvent(PushMessage message) {
+        //Log.e("FARID", "ONEVENT : " + message);
         Log.d(TAG, "\n\n--------------------\n\nGOT MESSAGE " + message + "\n\n");
         JSONObject data = message.getData();
         if (data != null) {
